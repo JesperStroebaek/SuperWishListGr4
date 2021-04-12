@@ -4,6 +4,13 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+server.port=8070
+
+# MySQL DB parameters
+user=root
+password=root
+url=jdbc:mysql://localhost:3306/useradmin?serverTimezone=UTC
+
 ### STS ###
 .apt_generated
 .classpath
