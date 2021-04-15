@@ -9,7 +9,7 @@ public class UserMapper {
     public void createUser(User user) throws SQLexceptionhandler {
         try {
             Connection con = DBManager.getConnection();
-            String SQL = "INSERT INTO Users (username, password) VALUES (?, ?)";
+            String SQL = "INSERT INTO Users (username, passwordwish) VALUES (?, ?)";
             PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, user.getUsername());
             ps.setString(2, user.getPassword());
