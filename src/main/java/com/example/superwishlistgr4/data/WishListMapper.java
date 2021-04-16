@@ -27,4 +27,7 @@ public class WishListMapper {
         }
 
     }
+
+    //SELECT * FROM wish_list "
+    //        + "WHERE user_id?
 }
