@@ -15,16 +15,21 @@ public class FrontController {
     public String create_user_form(){
         return "create_user_form";
     }
-    @GetMapping("wishlist")
+    @GetMapping("/wishlist")
     public String wishlist(){
         return "wishlist";
     }
     // postmapping sender "dit" tavleopslag videre.
-    @PostMapping("/submitform")
-    public String post(@RequestParam("username") String username, @RequestParam("password") String password)
+    @PostMapping("/submit_create_user_form")
+    public String post(@RequestParam("username") String username, @RequestParam("passwordwish") String passwordwish)
     {
         //User user = new User(username,password); ------------ ???
 
-        return "redirect:/succes";
+        return "redirect:/wishlist";
+    }
+    @PostMapping("/login")
+    public String User(@RequestParam("username") String username,
+                       @RequestParam("passwordwish") String passwordwish){
+        return "login";
     }
 }
