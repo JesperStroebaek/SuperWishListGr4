@@ -7,7 +7,7 @@ import com.example.superwishlistgr4.domain.Wishlist;
 import java.sql.*;
 
 public class WishListMapper {
-    //Den her kan måske skabe problemer
+    //Den her kan måske skabe problemer_er der ikke sat en * forkert i string SQL.?
     public void createWishlist(Wishlist wishlist) throws SQLexceptionhandler {
         try {
             Connection con = DBManager.getConnection();

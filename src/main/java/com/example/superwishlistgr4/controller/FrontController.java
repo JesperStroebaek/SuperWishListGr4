@@ -3,6 +3,7 @@ package com.example.superwishlistgr4.controller;
 import com.example.superwishlistgr4.data.DataFacadeImpl;
 import com.example.superwishlistgr4.domain.LogInController;
 import com.example.superwishlistgr4.domain.SQLexceptionhandler;
+
 import com.example.superwishlistgr4.domain.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +21,7 @@ public class FrontController {
         request.setAttribute("id", user.getId(), WebRequest.SCOPE_SESSION);
     }
 
-    @GetMapping("/")
+    @GetMapping("/index")
     public String index() {
         return "index";
     }
@@ -28,15 +29,18 @@ public class FrontController {
     public String create_user_form(){
         return "create_user_form";
     }
-    @GetMapping("/wishlist")
-    public String wishlist(){
-        return "wishlist";
+    @GetMapping("/create_user_form_succes")
+    public String create_user_form_succes(){
+        return "create_user_form_succes";
     }
-    // postmapping sender "dit" tavleopslag videre.
+    // postmapping sender userdata videre.
     @PostMapping("/submit_create_user_form")
-    public String post(@RequestParam("username") String username, @RequestParam("passwordwish") String passwordwish)
+    public String post(WebRequest request)
     {
-        //User user = new User(username,password); ------------ ???
+        //Retrieve values from HTML form via WebRequest
+        String username = request.getParameter("username");
+        String password = request.getParameter("passsword");
+
 
         return "redirect:/wishlist";
     }

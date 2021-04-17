@@ -20,20 +20,19 @@
   </nav>
   <hr>
 </header>
-<form action="/submitform" method="post">
-  <ul> <!-- firstnames and larstnames -->
-    <li><label for="username">User name</label></li>
+<form action="/submit_create_user_form" method="post">
+  <ul>
+    <li><label for="username">User Name</label></li>
     <input type="text" name="username" id="username">
-    <li><label for="passwordwish">Write a password</label></li>
+    <li><label for="useremail">User Email</label></li>
+    <input type="email" name="useremail" id="useremail">
+    <li><label for="passwordwish">Write a Password</label></li>
     <input type="password" name="passwordwish" id="passwordwish">
-
 
     <!-- button -->
     <input type="submit" name="submit" id="submit">
   </ul>
 </form>
-
-
 
 <footer id="foot">
   <hr>

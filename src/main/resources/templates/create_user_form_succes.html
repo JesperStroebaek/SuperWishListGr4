@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="stylesheet" type="text/css" href="style/stylesheet.css">
     <meta charset="UTF-8">
-    <title>wishlist</title>
+    <title>User_Create_Succes</title>
 </head>
-
 <body>
-
 <header class="user-form-header">
   <h1>
     Welcome to the SuperWishList
   </h1>
-  <p><em> The Wishlist..</em></p>
+  <p><em>You've now created a user who has acces to the SuperWishList!</em></p>
   <hr>
   <nav>
     <a href="create_user_form">Create new user</a>
@@ -23,15 +19,21 @@
   <hr>
 
 </header>
+<h4>Click on the link below to login</h4>
 
+<a href="index">Return to login</a>
 
-
+<section id="submit-user-form-succes">
+  <p th:text="${'Username: ' + wishlist.getUsername()}"></p>
+  <p th:text="${'Password: ' + wishlist.getPassword()}"></p>
+  <p th:text="${'Email adresse: ' + wishlist.GetEmail()}"></p>
+</section>
 
 <footer id="foot">
   <hr>
   <nav>
     <a href="create_user_form">Create User</a>
-    <a href="index">Login</a>
+    <a href="index">User Login</a>
     <a href="wishlist">WishList</a>
   </nav>
   <hr>
@@ -42,5 +44,4 @@
 </footer>
 
 </body>
-
 </html>
