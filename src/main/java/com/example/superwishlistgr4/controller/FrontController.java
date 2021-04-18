@@ -56,11 +56,25 @@ public class FrontController {
     public String createWishlist(){
         return "redirect:/create_wishlist_form";
     }
-    @PostMapping("/submit_create_wish_form")
+    @PostMapping("/submit_create_wishlist_form")
     public String wishlist(WebRequest wishlistrequest){
         String wishlistname = wishlistrequest.getParameter("wishlistname");
-        String enddate = wishlistrequest.getParameter("enddate");
+    //    Date enddate = wishlistrequest.getAttribute("enddate",);
+        Date enddate = Date.valueOf("enddate");
         Wishlist wishlist = new Wishlist(wishlistname,enddate);
-        return wishlistname+enddate;
+        return "redirect:/create_wishlist_form_succes";
     }
+    @GetMapping("/create_wishlist_form_succes")
+    public String create_wishlist_succes(){
+        return "create_wishlist_form_succes";
+    }
+    @PostMapping("/submit_create_wish_form")
+    public String wish(WebRequest wishrequest){
+        String title = wishrequest.getParameter("title");
+        String link = wishrequest.getParameter("link");
+        String fulfillwish = wishrequest.getParameter("fulfillwish");
+
+        return "redirect:/create_wish_succes";
+    }
+
 }

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="stylesheet" href="../style/stylesheet.css" type="text/css">
     <meta charset="UTF-8">
-    <title>WishlistCreator</title>
+    <title>wishlistCreator</title>
 </head>
 <body>
 <h2>
@@ -13,7 +14,7 @@
         <li><label for="wishlistname">Wishlist Name:</label></li>
         <input type="text" name="wishlistname" id="wishlistname">
         <li><label for="enddate">Wishlist Deadline</label></li>
-        <input type="text" name="enddate" id="enddate">
+        <input type="date" name="enddate" id="enddate">
         <!-- button -->
         <input type="submit" name="create list" id="submit-list">
     </ul>
