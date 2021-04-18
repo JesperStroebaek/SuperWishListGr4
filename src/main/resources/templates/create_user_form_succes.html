@@ -15,7 +15,7 @@
       <hr>
       <nav>
         <a href="create_user_form">Create new user</a>
-        <a href="index">Login</a>
+        <a href="/login">Login</a>
         <a href="wishlist">WishList</a>
       </nav>
       <hr>
@@ -23,11 +23,11 @@
     </header>
     <h4>Click on the link below to login</h4>
 
-    <a href="index">Return to login</a>
+    <a href="/login">Go to login</a>
 
     <section id="submit-user-form-succes">
-      <p th:text="${'username: ' + wishlist.getUsername()}"></p>
-      <p th:text="${'password: ' + wishlist.getPassword()}"></p>
+      <p th:text="${'username: ' + User.getUsername()}"></p>
+      <p th:text="${'password: ' + User.getPassword()}"></p>
 
     </section>
 
@@ -35,7 +35,7 @@
       <hr>
       <nav>
         <a href="create_user_form">Create User</a>
-        <a href="index">User Login</a>
+        <a href="/login">User Login</a>
         <a href="wishlist">WishList</a>
       </nav>
       <hr>
