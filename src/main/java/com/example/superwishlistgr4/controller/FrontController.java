@@ -1,7 +1,7 @@
 package com.example.superwishlistgr4.controller;
 
 import com.example.superwishlistgr4.data.DataFacadeImpl;
-import com.example.superwishlistgr4.model.LogInController;
+import com.example.superwishlistgr4.controller.LogInController;
 import com.example.superwishlistgr4.model.SQLexceptionhandler;
 
 import com.example.superwishlistgr4.model.User;
