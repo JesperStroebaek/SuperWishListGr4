@@ -18,7 +18,7 @@ public class LogInController {
         return facade.login(username, password);
     }
 
-    public User createUser(String username, String password, int id) throws SQLexceptionhandler {
+    public User user(String username, String password, int id) throws SQLexceptionhandler {
         // By default, new users are customers
         User user = new User(username, password, id);
         facade.createUser(user);

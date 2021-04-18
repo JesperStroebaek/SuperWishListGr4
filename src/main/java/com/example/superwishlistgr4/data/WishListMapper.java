@@ -12,7 +12,7 @@ public class WishListMapper {
             Connection con = DBManager.getConnection();
             String SQL = "INSERT INTO Wishlist (*/wishlist_id,/* wishlist_name, enddate, user_id) VALUES (/*?,*/ ?, ?, ?)";
             PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
-            //ps.setInt(1, wishlist.getWishlistid());
+            ps.setInt(1, wishlist.getWishlistid());
             ps.setString(1, wishlist.getWishtlistname());
             ps.setDate(2, wishlist.getEnddate());
             ps.setInt(3, wishlist.getUserid());

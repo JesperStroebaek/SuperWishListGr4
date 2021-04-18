@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WishlistCreator</title>
+</head>
+<body>
+<h2>
+    Create your Wishlist with a name and an end-date..
+</h2>
+<form action="/submit_create_wishlist_form" method="post">
+    <ul>
+        <li><label for="wishlistname">Wishlist Name:</label></li>
+        <input type="text" name="wishlistname" id="wishlistname">
+        <li><label for="enddate">Wishlist Deadline</label></li>
+        <input type="text" name="enddate" id="enddate">
+        <!-- button -->
+        <input type="submit" name="create list" id="submit-list">
+    </ul>
+</form>
+<hr>
+<h2>
+    Add wishes to your Wishlist with comments and weblinks to dealers..
+</h2>
+<form action="/submit_create_wish_form" method="post">
+    <ul>
+        <li><label for="title">Gift Title</label></li>
+        <input type="text" name="title" id="title">
+        <li><label for="link">Link to dealer</label></li>
+        <input type="text" name="link" id="link">
+        <li><label for="fulfillwish">Gift comments</label></li>
+        <input type="text" name="fulfillwish" id="fulfillwish">
+        <!-- button -->
+        <input type="submit" name="add wish to list" id="submit-wish">
+
+    </ul>
+</form>
+
+
+</body>
+</html>

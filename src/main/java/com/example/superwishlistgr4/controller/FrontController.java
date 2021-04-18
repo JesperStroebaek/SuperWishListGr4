@@ -1,13 +1,17 @@
 package com.example.superwishlistgr4.controller;
 
 import com.example.superwishlistgr4.data.DataFacadeImpl;
-import com.example.superwishlistgr4.controller.LogInController;
+import com.example.superwishlistgr4.data.WishListMapper;
 import com.example.superwishlistgr4.model.SQLexceptionhandler;
 
 import com.example.superwishlistgr4.model.User;
+import com.example.superwishlistgr4.model.Wish;
+import com.example.superwishlistgr4.model.Wishlist;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.context.request.WebRequest;
+
+import java.sql.Date;
 
 @org.springframework.stereotype.Controller
 public class FrontController {
@@ -48,5 +52,15 @@ public class FrontController {
     public String login(){
         return "/login";
     }
-
+    @GetMapping("createwishlist")
+    public String createWishlist(){
+        return "redirect:/create_wishlist_form";
+    }
+    @PostMapping("/submit_create_wish_form")
+    public String wishlist(WebRequest wishlistrequest){
+        String wishlistname = wishlistrequest.getParameter("wishlistname");
+        String enddate = wishlistrequest.getParameter("enddate");
+        Wishlist wishlist = new Wishlist(wishlistname,enddate);
+        return wishlistname+enddate;
+    }
 }
