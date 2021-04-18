@@ -55,4 +55,11 @@ public class FrontController {
 
         return "login";
     }
+   /* @PostMapping("/login")
+    public String login(){
+        return "login";
+    }
+
+    */
+
 }
