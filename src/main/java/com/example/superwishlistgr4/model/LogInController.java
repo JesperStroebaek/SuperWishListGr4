@@ -1,7 +1,7 @@
 package com.example.superwishlistgr4.domain;
 
 import com.example.superwishlistgr4.data.DataFacadeImpl;
-
+import com.example.superwishlistgr4.data.DataFacadeImpl;
 
 public class LogInController {
     // facade to datasource layer

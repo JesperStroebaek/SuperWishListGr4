@@ -1,13 +1,12 @@
 package com.example.superwishlistgr4.controller;
 
 import com.example.superwishlistgr4.data.DataFacadeImpl;
-import com.example.superwishlistgr4.domain.LogInController;
-import com.example.superwishlistgr4.domain.SQLexceptionhandler;
+import com.example.superwishlistgr4.model.LogInController;
+import com.example.superwishlistgr4.model.SQLexceptionhandler;
 
-import com.example.superwishlistgr4.domain.User;
+import com.example.superwishlistgr4.model.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.WebRequest;
 
 @org.springframework.stereotype.Controller

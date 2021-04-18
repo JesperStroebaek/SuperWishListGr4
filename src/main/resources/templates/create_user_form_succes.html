@@ -1,47 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
+  <link rel="stylesheet" href="../style/stylesheet.css" type="text/css">
     <meta charset="UTF-8">
     <title>User_Create_Succes</title>
 </head>
-<body>
-<header class="user-form-header">
-  <h1>
-    Welcome to the SuperWishList
-  </h1>
-  <p><em>You've now created a user who has acces to the SuperWishList!</em></p>
-  <hr>
-  <nav>
-    <a href="create_user_form">Create new user</a>
-    <a href="index">Login</a>
-    <a href="wishlist">WishList</a>
-  </nav>
-  <hr>
 
-</header>
-<h4>Click on the link below to login</h4>
+  <body>
+    <header class="user-form-header">
+      <h1>
+        Welcome to the SuperWishList
+      </h1>
+      <p><em>You've now created a user who has acces to the SuperWishList!</em></p>
+      <hr>
+      <nav>
+        <a href="create_user_form">Create new user</a>
+        <a href="index">Login</a>
+        <a href="wishlist">WishList</a>
+      </nav>
+      <hr>
 
-<a href="index">Return to login</a>
+    </header>
+    <h4>Click on the link below to login</h4>
 
-<section id="submit-user-form-succes">
-  <p th:text="${'username: ' + wishlist.getUsername()}"></p>
-  <p th:text="${'password: ' + wishlist.getPassword()}"></p>
+    <a href="index">Return to login</a>
 
-</section>
+    <section id="submit-user-form-succes">
+      <p th:text="${'username: ' + wishlist.getUsername()}"></p>
+      <p th:text="${'password: ' + wishlist.getPassword()}"></p>
 
-<footer id="foot">
-  <hr>
-  <nav>
-    <a href="create_user_form">Create User</a>
-    <a href="index">User Login</a>
-    <a href="wishlist">WishList</a>
-  </nav>
-  <hr>
+    </section>
 
-  <div id="foot-text">
-    <p>•  • Copyright ☺ 2021 • All rights reserved • Mathias - Jesper - Robert - Lukasz •  •</p>
-  </div>
-</footer>
+    <footer id="foot">
+      <hr>
+      <nav>
+        <a href="create_user_form">Create User</a>
+        <a href="index">User Login</a>
+        <a href="wishlist">WishList</a>
+      </nav>
+      <hr>
 
-</body>
+      <div id="foot-text">
+        <p>•  • Copyright ☺ 2021 • All rights reserved • Mathias - Jesper - Robert - Lukasz •  •</p>
+      </div>
+    </footer>
+
+  </body>
 </html>

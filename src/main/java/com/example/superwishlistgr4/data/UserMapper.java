@@ -1,7 +1,7 @@
 package com.example.superwishlistgr4.data;
 
-import com.example.superwishlistgr4.domain.User;
-import com.example.superwishlistgr4.domain.SQLexceptionhandler;
+import com.example.superwishlistgr4.model.User;
+import com.example.superwishlistgr4.model.SQLexceptionhandler;
 import java.sql.*;
 
 
