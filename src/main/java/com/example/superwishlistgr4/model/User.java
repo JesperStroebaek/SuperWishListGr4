@@ -1,4 +1,4 @@
-package com.example.superwishlistgr4.domain;
+package com.example.superwishlistgr4.model;
 
 public class User {
     private String username;

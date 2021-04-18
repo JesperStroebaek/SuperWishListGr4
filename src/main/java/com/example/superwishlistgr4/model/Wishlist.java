@@ -1,4 +1,4 @@
-package com.example.superwishlistgr4.domain;
+package com.example.superwishlistgr4.model;
 
 import java.sql.Date;
 
