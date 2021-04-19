@@ -61,7 +61,7 @@ public class FrontController {
         String wishlistname = wishlistrequest.getParameter("wishlistname");
     //    Date enddate = wishlistrequest.getAttribute("enddate",);
         Date enddate = Date.valueOf("enddate");
-        Wishlist wishlist = new Wishlist(wishlistname,enddate);
+     //   Wishlist wishlist = new Wishlist(wishlistid,wishlistname,enddate,userid);
         return "redirect:/create_wishlist_form_succes";
     }
     @GetMapping("/create_wishlist_form_succes")

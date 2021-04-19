@@ -8,7 +8,7 @@ public class Wishlist {
     private Date enddate;
     private int userid;
 
-    public Wishlist(String wishtlistname, Date enddate) {
+    public Wishlist(int wishlistid, String wishtlistname, Date enddate, int userid) {
         this.wishlistid = wishlistid;
         this.wishtlistname = wishtlistname;
         this.enddate = enddate;
