@@ -53,11 +53,11 @@ public class FrontController {
         return "login";
     }
     @GetMapping("create_wish_list-form")
-    public String createWishlist(){
+    public String create_wishlist(){
         return "redirect:create_wishlist_form";
     }
     @PostMapping("/submit_create_wishlist_form")
-    public String wishlist(WebRequest wishlistrequest){
+    public String submit_create_wishlist(WebRequest wishlistrequest){
         String wishlistname = wishlistrequest.getParameter("wishlistname");
     //    Date enddate = wishlistrequest.getAttribute("enddate",);
         Date enddate = Date.valueOf("enddate");
@@ -67,6 +67,10 @@ public class FrontController {
     @GetMapping("/create_wishlist_form_succes")
     public String create_wishlist_form_succes(){
         return "create_wishlist_form_succes";
+    }
+    @GetMapping("/wishlist")
+    public String wishlist(){
+        return "wishlist";
     }
     @PostMapping("/submit_create_wish_form")
     public String wish(WebRequest wishrequest){
