@@ -10,14 +10,22 @@ public class UserMapper {
         try {
             Connection con = DBManager.getConnection();
             String SQL = "INSERT INTO Users (username, passwordwish) VALUES (?, ?)";
+
+            System.out.println("så godt");
+
             PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
             ps.setString(1, user.getUsername());
             ps.setString(2, user.getPassword());
             ps.executeUpdate();
+            System.out.println("SAT TIL SQL");
+
             ResultSet ids = ps.getGeneratedKeys();
             ids.next();
             int id = ids.getInt(1);
             user.setId(id);
+
+            System.out.println("ID er sat");
+
         } catch (SQLException ex) {
             throw new SQLexceptionhandler(ex.getMessage());
         }
