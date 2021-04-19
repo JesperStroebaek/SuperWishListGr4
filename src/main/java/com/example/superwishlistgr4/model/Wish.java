@@ -8,7 +8,9 @@ public class Wish {
     private int userid;
     private int wishlistid;
 
-    public Wish(int wishID, String titel, String link, String fulfillwish, int userid, int wishlistid) {
+    public Wish(int wishID, String titel, String link, String fulfillwish,
+                int userid, int wishlistid) {
+
         this.wishID = wishID;
         this.titel = titel;
         this.link = link;

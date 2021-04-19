@@ -48,13 +48,13 @@ public class FrontController {
     public String create_user_form_succes(){
         return "create_user_form_succes";
     }
-    @PostMapping("/login")
+    @GetMapping("/login")
     public String login(){
-        return "/login";
+        return "login";
     }
-    @GetMapping("createwishlist")
+    @GetMapping("create_wish_list-form")
     public String createWishlist(){
-        return "redirect:/create_wishlist_form";
+        return "redirect:create_wishlist_form";
     }
     @PostMapping("/submit_create_wishlist_form")
     public String wishlist(WebRequest wishlistrequest){
@@ -65,7 +65,7 @@ public class FrontController {
         return "redirect:/create_wishlist_form_succes";
     }
     @GetMapping("/create_wishlist_form_succes")
-    public String create_wishlist_succes(){
+    public String create_wishlist_form_succes(){
         return "create_wishlist_form_succes";
     }
     @PostMapping("/submit_create_wish_form")
@@ -76,5 +76,8 @@ public class FrontController {
 
         return "redirect:/create_wish_succes";
     }
-
+    @GetMapping("create_wish_form_succes")
+    public String create_wish_form_succes(){
+        return "create_wish_form_succes";
+    }
 }

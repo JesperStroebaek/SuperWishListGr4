@@ -1,42 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <link rel="stylesheet" type="text/css" href="style/stylesheet.css">
+    <link rel="stylesheet" href="../style/stylesheet.css" type="text/css">
     <meta charset="UTF-8">
-    <title>wishlist</title>
+    <title>wish_creator</title>
 </head>
 
-  <body>
+<body>
     <header class="user-form-header">
       <h1>
         Welcome to the SuperWishList
       </h1>
-      <p><em> The Wishlist..</em></p>
+        <p><em> The Wishlist..</em></p>
       <hr>
-      <nav>
-        <a href="create_user_form">Create new user</a>
-        <a href="index">Login</a>
-        <a href="wishlist">WishList</a>
-      </nav>
+        <nav>
+          <a href="create_user_form">Create new user</a>
+          <a href="index">Login</a>
+          <a href="wishlist">WishList</a>
+        </nav>
       <hr>
-
     </header>
+    <h2>
+      Type in the name of the Wishlist you want acces to..
+    </h2>
+    <form action="/submit_create_wish_form" method="post">
+      <ul>
+        <li><label for="wishlistname">Wishlist Name:</label></li>
+        <input type="text" name="wishlistname" id="wishlistname">
+
+        <!-- button -->
+        <input type="submit" name="create list" id="submit-list">
+      </ul>
+    </form>
+
 
 
     <footer id="foot">
       <hr>
-      <nav>
-        <a href="create_user_form">Create User</a>
-        <a href="index">Login</a>
-        <a href="wishlist">WishList</a>
-      </nav>
+        <nav>
+          <a href="create_user_form">Create new user</a>
+          <a href="login">Login</a>
+          <a href="wishlist">WishList</a>
+        </nav>
       <hr>
 
       <div id="foot-text">
         <p>•  • Copyright ☺ 2021 • All rights reserved • Mathias - Jesper - Robert - Lukasz •  •</p>
       </div>
     </footer>
-  </body>
+</body>
 
 </html>
