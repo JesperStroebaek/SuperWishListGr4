@@ -1,4 +1,4 @@
-package com.example.superwishlistgr4.data;
+package com.example.superwishlistgr4.dataAccess;
 
 import com.example.superwishlistgr4.model.DataFacade;
 import com.example.superwishlistgr4.model.SQLexceptionhandler;

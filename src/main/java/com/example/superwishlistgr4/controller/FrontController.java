@@ -1,12 +1,10 @@
 package com.example.superwishlistgr4.controller;
 
-import com.example.superwishlistgr4.data.DataFacadeImpl;
-import com.example.superwishlistgr4.data.WishListMapper;
+import com.example.superwishlistgr4.dataAccess.DataFacadeImpl;
+import com.example.superwishlistgr4.model.LogInHandler;
 import com.example.superwishlistgr4.model.SQLexceptionhandler;
 
 import com.example.superwishlistgr4.model.User;
-import com.example.superwishlistgr4.model.Wish;
-import com.example.superwishlistgr4.model.Wishlist;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.context.request.WebRequest;
@@ -16,7 +14,7 @@ import java.sql.Date;
 @org.springframework.stereotype.Controller
 public class FrontController {
 
-    private LogInController loginController = new LogInController(new DataFacadeImpl());
+    private LogInHandler loginHandler = new LogInHandler(new DataFacadeImpl());
 
     private void setSessionInfo(WebRequest request, User user) {
         // Place user info on session
@@ -39,7 +37,7 @@ public class FrontController {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        User user = loginController.login(username, password);
+        User user = loginHandler.login(username, password);
         setSessionInfo(request, user);
         return "redirect:/create_user_form_succes";
     }

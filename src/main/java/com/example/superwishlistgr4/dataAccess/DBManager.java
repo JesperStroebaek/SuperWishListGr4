@@ -1,4 +1,4 @@
-package com.example.superwishlistgr4.data;
+package com.example.superwishlistgr4.dataAccess;
 
 import java.io.FileInputStream;
 import java.io.IOException;

@@ -1,10 +1,19 @@
-package com.example.superwishlistgr4.data;
+package com.example.superwishlistgr4.dataAccess;
 
 import com.example.superwishlistgr4.model.SQLexceptionhandler;
 import com.example.superwishlistgr4.model.Wish;
 import java.sql.*;
 
-public class WishMapper {
+public class WishMapper
+{
+
+
+
+
+
+
+
+
 
     public void createWish(Wish wish) throws SQLexceptionhandler {
         try {

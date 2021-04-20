@@ -1,4 +1,4 @@
-package com.example.superwishlistgr4.data;
+package com.example.superwishlistgr4.dataAccess;
 
 import com.example.superwishlistgr4.model.User;
 import com.example.superwishlistgr4.model.SQLexceptionhandler;
@@ -34,8 +34,7 @@ public class UserMapper {
     public User login(String username, String password) throws SQLexceptionhandler {
         try {
             Connection con = DBManager.getConnection();
-            String SQL = "SELECT id FROM users "
-                    + "WHERE username=? AND passwordwish=?";
+            String SQL = "SELECT id FROM users " + "WHERE username=? AND passwordwish=?";
             PreparedStatement ps = con.prepareStatement(SQL);
             ps.setString(1, username);
             ps.setString(2, password);
