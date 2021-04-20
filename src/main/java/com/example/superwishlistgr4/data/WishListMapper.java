@@ -26,10 +26,30 @@ public class WishListMapper {
         } catch (SQLException ex) {
             throw new SQLexceptionhandler(ex.getMessage());
         }
+    }
+
+    public String getWishlist (Wishlist wishlist) throws SQLexceptionhandler {
+        try {
+            Connection con = DBManager.getConnection();
+            String SQL = "SELECT wishlist_name, enddate, wishlist_id FROM gift WHERE userid =?";
+            PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, wishlist.getUserid());
+            ResultSet rs = ps.executeQuery();
 
 
+            while (rs.next()) {
 
 
+            }
+
+            System.out.println(SQL);
+            System.out.println(ps);
+
+            return wishlist.toString();
+
+        } catch (SQLException ex) {
+            throw new SQLexceptionhandler(ex.getMessage());
+        }
     }
 
     //SELECT * FROM wish_list "
