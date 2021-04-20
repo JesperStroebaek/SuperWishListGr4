@@ -66,4 +66,16 @@ public class Wish {
     public void setWishlistid(int wishlistid) {
         this.wishlistid = wishlistid;
     }
+
+    @Override
+    public String toString() {
+        return "Wish{" +
+                "wishID=" + wishID +
+                ", titel='" + titel + '\'' +
+                ", link='" + link + '\'' +
+                ", fulfillwish='" + fulfillwish + '\'' +
+                ", userid=" + userid +
+                ", wishlistid=" + wishlistid +
+                '}';
+    }
 }

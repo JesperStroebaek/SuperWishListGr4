@@ -28,10 +28,11 @@ public class WishListMapper {
         }
     }
 
+    //gets wishlists from the data associated with the user_id
     public String getWishlist (Wishlist wishlist) throws SQLexceptionhandler {
         try {
             Connection con = DBManager.getConnection();
-            String SQL = "SELECT wishlist_name, enddate, wishlist_id FROM gift WHERE userid =?";
+            String SQL = "SELECT wishlist_name, enddate, wishlist_id FROM gift WHERE user_id =?";
             PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
             ps.setInt(1, wishlist.getUserid());
             ResultSet rs = ps.executeQuery();
@@ -51,7 +52,4 @@ public class WishListMapper {
             throw new SQLexceptionhandler(ex.getMessage());
         }
     }
-
-    //SELECT * FROM wish_list "
-    //        + "WHERE user_id?
 }

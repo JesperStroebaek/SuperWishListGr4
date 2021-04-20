@@ -34,5 +34,35 @@ public class WishMapper {
             throw new SQLexceptionhandler(ex.getMessage());
         }
     }
+
+    //get wishes from data associated with the wishlists id
+    public String getWishes (Wish wish) throws SQLexceptionhandler {
+        try {
+            Connection con = DBManager.getConnection();
+            String SQL = "SELECT wishlist_id, enddate, wishlist_id FROM wish WHERE wishlist_id =?";
+            PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, wish.getWishlistid());
+            ResultSet rs = ps.executeQuery();
+
+            System.out.println("Select Statement worked");
+
+
+            while (rs.next()) {
+
+
+            }
+
+            System.out.println("While succesfull");
+
+            System.out.println(SQL);
+            System.out.println(ps);
+
+            return wish.toString();
+
+
+        } catch (SQLException ex) {
+        throw new SQLexceptionhandler(ex.getMessage());
+        }
+    }
 }
 
